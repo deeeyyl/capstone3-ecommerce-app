@@ -1,0 +1,601 @@
+/* ====================================================================== */
+/* GLOBAL / BASE STYLES */
+/* ====================================================================== */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #e6e6e6;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.App {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e0e0;
+  background-color: #fff !important;
+}
+
+/* Remove top margin from first container */
+body .container.mt-4:first-of-type {
+  margin-top: 0 !important;
+}
+
+/* ====================================================================== */
+/* NAVBAR */
+/* ====================================================================== */
+
+.navbar {
+  background: #fff;
+  width: 100%;
+  height: 88px;
+  margin-bottom: 0 !important;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .nav-link {
+  color: #656565 !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #000 !important;
+}
+
+.navbar-collapse {
+  background-color: #fff; 
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    padding: 1rem;
+  }
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* ====================================================================== */
+/* BANNER (Hero Section) */
+/* ====================================================================== */
+
+.banner-bg {
+  position: relative;
+  background-image: url('../public/images/1.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 850px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  padding-left: 10%; 
+}
+
+.text-container {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  width: 50%;
+  text-align: left;
+}
+
+.pro {
+  margin-top: 150px !important;
+  font-size: 45px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.iPhone {
+  font-size: 100px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.paragraph {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.button-container {
+  position: absolute;
+  top: 65%;
+  left: 20%;
+  transform: translateX(-50%);
+}
+
+.shopNow-button {
+  background: transparent;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.shopNow-button:hover {
+  background: white;
+  color: black;
+}
+
+/* ------------------------- */
+/* Tablet (max-width: 1024px) */
+/* ------------------------- */
+@media (max-width: 1024px) {
+  .banner-bg {
+    padding-left: 10%;
+    height: 85vh;
+  }
+.pro {
+    font-size: 36px;
+    margin-top: 100px !important;
+  }
+  .iPhone {
+    font-size: 60px;
+  }
+}
+
+/* ------------------------- */
+/* Mobile (max-width: 768px) */
+/* ------------------------- */
+@media (max-width: 768px) {
+  .banner-bg {
+    background: url('../public/images/mobile.jpg') no-repeat center center/cover;
+    padding-left: 5%;
+    justify-content: center;
+    text-align: center;
+    height: 60vh;
+  }
+
+  .text-container {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .pro {
+    font-size: 24px;
+    margin-bottom: 10px !important;
+    margin-top: 20px;
+  }
+
+  .iPhone {
+    font-size: 36px;
+    margin-bottom: 0;
+  }
+
+  .paragraph {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .button-container {
+    position: relative;
+    margin: 0 auto;
+    transform: none;
+    width: fit-content;
+  }
+
+  .shopNow-button {
+    width: 130px;
+    font-size: 16px;
+  }
+}
+
+/* ------------------------- */
+/* Small Mobile (max-width: 480px) */
+/* ------------------------- */
+@media (max-width: 480px) {
+  .banner-bg {
+    height: 80vh;
+    padding-left: 10%;
+    width: 100%;
+  }
+
+  .pro {
+    font-size: 20px;
+    margin-top: 100px;
+  }
+
+  .iPhone {
+    font-size: 30px;
+  }
+
+  .paragraph {
+    font-size: 12px;
+  }
+
+  .shopNow-button {
+    width: 110px;
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-top: 100px;
+  }
+}
+
+/* ------------------------- */
+/* iPad Pro (Portrait) */
+/* ------------------------- */
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-width: 1024px) 
+  and (min-height: 1366px) 
+  and (max-height: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  
+  .banner-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+  }
+}
+
+/* ------------------------- */
+/* iPad Pro (Landscape) */
+/* ------------------------- */
+@media only screen 
+  and (min-width: 1366px) 
+  and (max-width: 1366px) 
+  and (min-height: 1024px) 
+  and (max-height: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  
+  .banner-bg {
+    background-size: cover;
+    background-position: center;
+    height: 65vh;
+  }
+}
+
+/* ====================================================================== */
+/* DOUBLE BANNER */
+/* ====================================================================== */
+
+.double-banner {
+  display: flex;
+  height: 700px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.left-bg,
+.right-bg {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.left-bg {
+  background-image: url('../public/images/Left-ban.png');
+}
+
+.right-bg {
+  background-image: url('../public/images/Right-ban.jpg');
+  position: relative; 
+}
+
+.shop-btn {
+  position: absolute;
+  bottom: 100px;
+  left: 200px;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: black;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.shop-btn:hover {
+  background: black;
+  color: white;
+}
+
+/* ------------------------- */
+/* Tablet (max-width: 1028px) */
+/* ------------------------- */
+@media (max-width: 1280px) {
+  .double-banner {
+    height: 600px;
+  }
+
+  .left-bg,
+  .right-bg {
+    height: 500px;
+    width: 100%;
+  }
+
+  .shop-btn {
+    bottom: 80px;
+    left: 150px;
+    font-size: 14px;
+  }
+}
+/* ------------------------- */
+/* Tablet (max-width: 1024px) */
+/* ------------------------- */
+
+@media (max-width: 1024px) {
+  .double-banner {
+    height: auto;
+    min-height: 400px; /* optional: ensures it’s not too small */
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+  }
+
+  .left-bg,
+  .right-bg {
+    height: auto;
+    width: 100%;
+  }
+
+  .shop-btn {
+    bottom: 50px;
+    left: 20px;
+    font-size: 14px;
+  }
+
+  .home-bg {
+    margin-top: 0 !important;
+  }
+}
+
+/* ------------------------- */
+/* Mobile (max-width: 768px) */
+/* ------------------------- */
+@media (max-width: 768px) {
+  .double-banner {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-bg,
+  .right-bg {
+    flex: none;
+    height: 350px;
+    width: 100%;
+  }
+
+  .shop-btn {
+    bottom: 20px;
+    left: 10px;
+  }
+}
+/* ====================================================================== */
+/* BROWSE BY CATEGORY */
+/* ====================================================================== */
+.browse-categories {
+  background-color: #F6F6F6;
+  width: 100%;
+  padding: 55px;
+  margin-top: 0 !important;
+}
+
+@media (max-width: 1024px) {
+  .browse-categories{
+    margin-top: 0 !important;
+
+    .home-bg {
+      display: none;;
+    }
+  }
+}
+
+.browse-categories h3 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #444 !important;
+}
+
+.browse-categories img {
+  height: 135px;
+  background-color: #f6f6f6;
+  border-radius: 25px !important;
+  }
+
+.category-card{
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  }
+
+.category-card:hover { 
+  transform: scale(1.05);  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  cursor: pointer; 
+  background-color: #f6f6f6;
+}
+/* ====================================================================== */
+/* FEATURED PRODUCTS */
+/* ====================================================================== */
+
+.featured-container {
+  margin-top: 30px;
+  padding: 0;
+}
+
+/* ====================================================================== */
+/* CARDS */
+/* ====================================================================== */
+
+.card {
+  background-color: #F6F6F6;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  color: #000 !important;
+  gap: 0.5rem;
+}
+
+/* Product Cards */
+.liked-products-container {
+  width: 100%;
+  padding: 1rem;
+}
+
+.liked-products-container > h2 {
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.product-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.product-card-wrapper > div {
+  flex: 0 1 22%;
+  max-width: 300px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+.product-card-wrapper .add-to-cart-btn {
+  width: 100%;
+  max-width: 200px; 
+  margin: 0 auto;
+}
+
+.product-card-wrapper > div .card {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card-wrapper > div .card-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-text.text-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .product-card-wrapper > div {
+    flex: 0 1 45%;
+    max-width: 100%;
+  }
+}
+
+/* ====================================================================== */
+/* CHECKOUT */
+/* ====================================================================== */
+
+.checkout-card {
+  background: rgba(20, 24, 31, 0.95);
+  border-radius: 12px;
+  padding: 30px;
+  color: #f5faff;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  background-color: #21252d;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.checkout-form input::placeholder,
+.checkout-form textarea::placeholder {
+  color: #999;
+}
+
+.checkout-form label {
+  color: #cccccc;
+  font-weight: 600;
+}
+
+.checkout-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #7fdbff;
+}
+
+.checkout-total {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: right;
+  color: #7fdbff;
+}
+
+/* ====================================================================== */
+/* BUTTONS */
+/* ====================================================================== */
+
+.btn-success {
+  background-color: #00c6ff;
+  border: none;
+  color: #000;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-success:hover {
+  background-color: #00acc1;
+  box-shadow: 0 0 10px rgba(0, 198, 255, 0.7);
+}
+
+.custom-success-btn {
+  background-color: #008cff !important;
+  border: none !important;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 140, 255, 0.4);
+}
+
+.custom-success-btn:hover {
+  background-color: #005f99 !important;
+  box-shadow: 0 0 15px rgba(0, 140, 255, 0.7);
+}
+
+/* ====================================================================== */
+/* TYPOGRAPHY */
+/* ====================================================================== */
+
+h2, h4, .checkout-title, .checkout-total {
+  color: #7fdbff;
+}
+
+.page-title {
+  font-weight: 1000px;
+  color: #000;
+}
